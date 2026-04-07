@@ -1,0 +1,46 @@
+{
+  "level": "N5",
+  "timeLimit": 155,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "question": "わたしは まいあさ ６じに（　　）。",
+      "options": ["おきます", "おきません", "おきて", "おいた"],
+      "correct_answer": 0,
+      "explanation": "「おきます」means 'to wake up'. The sentence translates to 'I wake up at 6 every morning.'"
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "question": "きのうは どこ（　　）いきませんでした。",
+      "options": ["へも", "にも", "でも", "とも"],
+      "correct_answer": 0,
+      "explanation": "The particle へ (he) implies direction, and も (mo) makes it mean 'nowhere'. 'I didn't go anywhere yesterday.'"
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "question": "あした ひま（　　）、あそびに きませんか。",
+      "options": ["だったら", "なら", "ですから", "ですが"],
+      "correct_answer": 0,
+      "explanation": "「だったら」 expresses a condition. 'If you are free tomorrow, won't you come play?'"
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "question": "えきまで タクシーで １０００えん（　　）です。",
+      "options": ["ぐらい", "ごろ", "など", "しか"],
+      "correct_answer": 0,
+      "explanation": "「ぐらい」 is used for approximate amounts or prices. 'It costs about 1000 yen to the station by taxi.'"
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "question": "この りんごは（　　）ですか。",
+      "options": ["いくつ", "いくら", "どんな", "どれ"],
+      "correct_answer": 1,
+      "explanation": "「いくら」 is used to ask 'how much' (price). 'How much is this apple?'"
+    }
+  ]
+}

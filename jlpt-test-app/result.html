@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results - JLPT Test App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Load required libraries for PDF generation from stable CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQmJbSlZGg2aOls1OkwkREh4XUoG2H2XkO8Wpe/m2x8rE/A1nL8rEGBY5I1aHk8sU/x9oYnZJc5lq/2Gow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="dashboard.html" class="logo">日本語 JLPT</a>
+            <a href="dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <!-- Everything inside this specific div is what we will snapshot for the PDF -->
+        <div id="report-content" style="background: var(--surface-color); padding: 20px;">
+            <div class="result-header">
+                <h2>Test Completed!</h2>
+                <div class="score-display" id="final-score">--%</div>
+                <div id="correct-count" style="font-size: 1.25rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem;">-- / -- Correct</div>
+                
+                <div id="feedback-msg" class="feedback-box">
+                    Analyzing your score...
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="mb-4 text-center">Detailed Analysis</h3>
+                <div id="analysis-container">
+                    <!-- Dynamic analysis -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating action button for PDF export -->
+    <button id="generate-pdf" class="btn btn-primary" title="Export as PDF">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download PDF
+    </button>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initResults);
+    </script>
+</body>
+</html>

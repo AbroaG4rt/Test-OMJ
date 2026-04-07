@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Interface - JLPT Test App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="dashboard.html" class="logo">日本語 JLPT</a>
+            <div id="question-count" style="font-weight: 500; color: var(--text-muted);">Question 1 of 10</div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div class="test-header">
+            <div>
+                <strong>Time Remaining</strong>
+            </div>
+            <div class="timer" id="timer">--:--:--</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar-bg">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="card" id="question-container">
+            <h2 class="question-text" id="question-text">Loading question...</h2>
+            <div class="options-grid" id="options-container">
+                 <!-- Options dynamically inserted here -->
+            </div>
+        </div>
+
+        <div class="test-controls">
+            <button class="btn btn-outline" id="btn-prev" disabled>Previous</button>
+            <button class="btn btn-primary" id="btn-next">Next</button>
+            <button class="btn btn-primary" id="btn-submit" style="display: none; background: var(--success-color);">Submit Test</button>
+        </div>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initTestEngine);
+    </script>
+</body>
+</html>

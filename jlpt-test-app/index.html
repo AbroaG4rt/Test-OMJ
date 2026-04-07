@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLPT Test App - Redirecting</title>
+</head>
+<body>
+    <script>
+        // Check if user is logged in
+        const user = JSON.parse(localStorage.getItem('jlpt_user'));
+        if (user && user.isLoggedIn) {
+            window.location.href = 'dashboard.html';
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

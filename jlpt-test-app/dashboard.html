@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - JLPT Test App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">日本語 JLPT</a>
+            <button id="logout-btn" class="btn btn-outline">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <h1 class="text-center mb-8">Select Your Level</h1>
+        <!-- Using custom dataset level attribute to determine what test parameter to load -->
+        <div class="level-grid">
+            <a href="#" class="card level-card" data-level="n1">
+                <h2>N1</h2>
+                <p>Advanced</p>
+            </a>
+            <a href="#" class="card level-card" data-level="n2">
+                <h2>N2</h2>
+                <p>Upper Intermediate</p>
+            </a>
+            <a href="#" class="card level-card" data-level="n3">
+                <h2>N3</h2>
+                <p>Intermediate</p>
+            </a>
+            <a href="#" class="card level-card" data-level="n4">
+                <h2>N4</h2>
+                <p>Elementary</p>
+            </a>
+            <a href="#" class="card level-card" data-level="n5">
+                <h2>N5</h2>
+                <p>Beginner</p>
+            </a>
+        </div>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>
